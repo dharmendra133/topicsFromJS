@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Call Method practice</title>
+</head>
+<body>
+	<script type="text/javascript">
+		const youtuber1={
+			name:"Nepali Students' Guide",
+			content:"Educational",
+			support:function(subs,likes){
+				console.log(`I love ${this.name} channel. it makes ${this.content} content. the channel has ${subs} and total ${likes} likes`);
+			}
+		}
+
+		// youtuber1.support();
+		const youtuber2={
+			name:"Dharmendra sah",
+			content:"vloggin",
+		}
+		youtuber1.support.call(youtuber2,20,100);
+
+
+	</script>
+
+</body>
+</html>

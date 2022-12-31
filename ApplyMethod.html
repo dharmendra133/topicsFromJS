@@ -1,0 +1,22 @@
+<script type="text/javascript">
+	//same as call method but pass arguments in form of array
+
+		const youtuber1={
+			name:"Nepali Students' Guide",
+			content:"Educational",
+			support:function(subs,likes){
+				console.log(`I love ${this.name} channel. it makes ${this.content} content. the channel has ${subs} and total ${likes} likes`);
+			}
+		}
+
+		// youtuber1.support();
+		const youtuber2={
+			name:"Dharmendra sah",
+			content:"vloggin",
+		}
+		youtuber1.support.call(youtuber2,[20,100]);
+
+		let max=Math.max.apply(null,[1,2,3,4,23,1,5,6,6,23]);
+		console.log(max);
+
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Call Stack & Execution Context</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var globalIEC="window";
+		function a(){
+			var fa="2nd function o/p1";
+			console.log(fa);
+			debugger;
+			b();
+			console.log('lets see when i will be on console');
+		}
+
+		function b(){
+			debugger;
+			console.log("2nd function o/p2");
+			c();
+		}
+		
+		function c(){
+			debugger;
+			console.log("3rd function o/p3");
+		}
+		debugger;
+		a();
+
+	</script>
+
+</body>
+</html>

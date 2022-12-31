@@ -1,0 +1,34 @@
+<script type="text/javascript">
+	//Any function that is passed as an argument is called callback function.
+	// A callback is a function that is to be executed after another function has finished executing-hence the name 'call back'.
+
+
+
+	// const funA=()=>{
+	// 	setTimeout(function(){
+	// 		console.log(`welcome from funA`);
+	// 		funB();
+	// 	},1000);
+
+	// }
+
+	// const funB=()=>{
+	// 	console.log(`welcome from funB`);
+	// }
+
+	// funA();
+
+
+	const perOne=(friend,callfrnd)=>{
+		console.log(`I am busy right Now. I am talking to ${friend}. call you later`);
+		callfrnd();
+	}
+	const perTwo=()=>{
+		console.log(`Hey what's up. I will call back to you`);
+	}
+
+	perOne("Dharmendra",perTwo);
+
+
+	
+</script>

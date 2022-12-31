@@ -1,0 +1,25 @@
+<script type="text/javascript">
+	//the bind method takes the object as first argument and creates a new function
+		// const youtuber1={
+		// 	name:"Nepali Students' Guide",
+		// 	content:"Educational",
+		// 	support:function(subs,likes){
+		// 		console.log(`I love ${this.name} channel. it makes ${this.content} content. the channel has ${subs} and total ${likes} likes`);
+		// 	}
+		// }
+
+		// let  youtuber2=youtuber1.support.bind(youtuber1);
+		// youtuber2();
+
+	const youtuber2 = {
+		name:"Dharmendra sah",
+		content:"Vlogging",
+	} 
+
+	function support(rating){
+		console.log(`I love ${this.name} channel. it makes ${this.content} and I will rate it ${rating}`); 
+	}
+
+	let func=support.bind(youtuber2,5);
+	func();
+</script>
