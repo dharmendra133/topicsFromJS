@@ -1,0 +1,48 @@
+<script type="text/javascript">
+	
+	const pr1=new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			var arr=[1,2,3,4,5];
+
+			resolve(arr);
+			
+
+		},3000);
+
+	});
+
+	const pr2=(indexdata)=>{
+		return new Promise((resolve,reject)=>{
+			setTimeout(()=>{
+				let biodata={
+				name:"Dharmendra",
+				age:22
+				}
+				resolve(`I am roll no ${indexdata}. My name is ${biodata.name} and my age is ${biodata.age}`);
+			},3000,indexdata);
+			
+		});
+	}
+
+	async function getAns(){
+		try{
+			const ans1=await pr1;
+			console.log(ans1);
+
+			const ans2=await pr2(ans1[0]);
+			console.log(ans2);
+			return ans2;
+		}
+		catch(error){
+			alert(`The Error is: ${error}`);
+		}
+
+	}
+	// getAns();
+	const getans1=getAns().then((name)=>{
+		console.log(name);
+	});
+	
+
+
+</script>

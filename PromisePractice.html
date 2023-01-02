@@ -1,0 +1,52 @@
+<script type="text/javascript">
+	//practicing Promise
+		//first we have to print name after 2 sec
+		//then print age after 2 sec of printing name
+		//then print address after 2 sec of printing age
+
+	const pr1=new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+			var arr=[1,2,3,4,5];
+
+			resolve(arr);
+			
+
+		},3000);
+
+	});
+
+	const pr2=(indexdata)=>{
+		return new Promise((resolve,reject)=>{
+			setTimeout(()=>{
+				let biodata={
+				name:"Dharmendra",
+				age:22
+				}
+				resolve(`I am roll no ${indexdata}. My name is ${biodata.name} and my age is ${biodata.age}`);
+			},3000,indexdata);
+			
+		});
+	}
+/*
+	pr1.then((arr)=>{
+		console.log(arr[0]);
+		pr2(arr[0]).then((abcddd)=>{
+			console.log(abcddd);
+		}).catch(()=>{
+			console.log('rejected 2nd');
+		});
+
+	}).catch((reject)=>{
+		console.log('rejected');
+	});*/
+
+	//above code can be written but is too lengthy
+	pr1.then((arr)=>{
+		console.log(arr);
+		return pr2(arr[0]);
+	}).then((kuchbhi)=>{
+		console.log(kuchbhi);
+	}).catch((error)=>{
+		console.log(error);
+	});
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Call Back Hell.</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//practicing call back hell
+		//first we have to print name after 2 sec
+		//then print age after 2 sec of printing name
+		//then print address after 2 sec of printing age
+		const func=()=>{
+			setTimeout(()=>{
+				console.log('My name is dharmendra kumar sah');
+
+				setTimeout(()=>{
+					let ages=[1,2,3,4,5];
+					console.log(ages[4]);
+					setTimeout(()=>{
+						var dh={
+							address:"Mirchaiya",
+							college:"VIT Vellore"
+						}
+						console.log(dh.address);
+					},2000);
+
+				},2000);
+
+			},2000);
+		}	
+		func();
+
+
+
+	</script>
+
+</body>
+</html>
